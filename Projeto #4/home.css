@@ -1,0 +1,6 @@
+.display-flex{
+    margin-top: .3vw;
+    margin-left: .7vw;
+    display: flex !important;
+    flex-direction: column;
+}
