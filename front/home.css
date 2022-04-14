@@ -1,6 +1,25 @@
-.display-flex{
+.d-flex{
+    display: flex !important;
+    flex-direction: column !important;
     margin-top: .3vw;
     margin-left: .7vw;
-    display: flex !important;
-    flex-direction: column;
+}
+
+.d-flex a{
+    margin-top: .05vw;
+    margin-bottom: .5vw;
+}
+
+.animation{
+    animation: height 300ms ease forwards;
+    visibility: visible !important;
+}
+
+@keyframes height {
+    from{
+        height: 0;
+    }
+    to{
+        min-height: 60px;
+    }
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,12 @@
     <script>
         tailwind.config = {
             theme: {
+                minHeight: {
+                    '350': '350px'
+                },
                 height: {
+                    '50%': "50%",
+                    '500': '500px',
                     '1000': '1000px'
                 },
                 screens: {
@@ -27,66 +33,64 @@
 
 <body class="bg-cyan-600">
     <header class="flex justify-around items-center bg-black border-b-2 border-double border-white"
-        style="min-height: 12vh">
-        <h1 class="w-1/3 font-serif text-center text-3xl text-white text-gray italic"><i
+        style="min-height: 10vh">
+        <h1 class="w-1/3 font-serif text-center text-3xl text-white text-gray italic sm:text-lg"><i
                 class="fa-solid fa-code text-cyan-500"></i>Digital Learn</h1>
-        <h2 class="w-1/3 font-serif text-center text-2xl text-white text-gray-200 italic">Meu curso</h2>
-        <div class="w-1/3 flex items-center justify-center">
-            <img class="w-10 h-10 rounded"
-                src="https://o.remove.bg/downloads/b9443c78-08c3-4067-9c24-70d6ce17b190/image-removebg-preview.png"
+        <h2 class="w-1/3 font-serif text-center text-2xl text-white text-gray-200 italic sm:hidden">Meu curso</h2>
+        <div class="w-1/3 flex items-center justify-center" style="height: 100%;">
+            <img class="w-12 rounded sm:w-8"
+                src="https://media.istockphoto.com/vectors/user-icon-flat-isolated-on-white-background-user-symbol-vector-vector-id1300845620?k=20&m=1300845620&s=612x612&w=0&h=f4XTZDAv7NPuZbG0habSpU0sNgECM0X7nbKzTUta3n8="
                 alt="">
-            <h1 class="w-1/4 font-serif text-xl text-white text-gray italic ml-1 md:w-1/3 sm:w-1/2">Ismael</h1>
+
+            <h1 class="w-2/3 font-serif text-xl text-white text-gray italic ml-1 sm:text-lg">Ismael</h1>
         </div>
     </header>
-    <section class="flex h-full" style="height: 87.8vh;">
-        <div class="w-3/4">
-            <iframe class="w-full" height="100%" src="https://www.youtube.com/embed/idQHztQNXQc"
-                title="YouTube video player" frameborder="0"
+    <section class="flex lg:flex-col" style="height: 80vh;">
+        <div class="w-3/4 lg:w-full lg:h-50%">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Ds1n6aHchRU" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen id="video"></iframe>
         </div>
-        <div class="w-1/4 min-h-full flex items-center flex-col">
-            <div class="bg-white w-full p-4 border-b-2 border-gray" style="height: 10%">
-                <h1 class="pl-2 text-lg text-black font-bold">Topicos do curso</h1>
+        <div class="w-1/4 overflow-hidden flex items-center flex-col lg:w-full lg:h-50%">
+            <div class="bg-white w-full p-4 border-b-2 border-gra flex items-center">
+                <h1 class="text-2md text-black font-bold">Topicos do curso</h1>
             </div>
-            <div class="overflow-scroll overflow-x-hidden h-4/5 bg-white w-full p-3 border-b-1 border-gray-500"
-                style="height: 90%">
-                <h1 class="p-4 border-b-2 border-gray">
+            <div class="overflow-scroll overflow-x-hidden h-4/5 bg-white w-full p-3 pb-7 border-b-1 border-gray-500"
+                style="min-height: 93%">
+                <h1 class="my-2 border-b-2 border-gray flex justify-center flex-col">
                     <a href="javascript:showDiv(1)">1.Lógica de programação.</a>
-                    <div class="hidden" id="div1">
-                        <a href="http://">1.Introdução</a>
-                        <a href="http://">2.Conceitos básicos</a>
+                    <div class="hidden h-0 invisible" id="div1">
+                        <a href="javascript:showVideo(1)">Introdução</a>
+                        <a href="javascript:showVideo(2)">Tipos de algoritmos</a>
                     </div>
                 </h1>
-                <h1 class="p-4 border-b-2 border-gray">
-                    <a href="javascript:showDiv(2)">2.Introdução HTML.</a>
-                    <div class="hidden" id="div2">
-                        <a href="http://">1.Introdução</a>
-                        <a href="http://">2.Conceitos básicos</a>
+                <h1 class="my-2 border-b-2 border-gray flex justify-center flex-col">
+                    <a href="javascript:showDiv(2)">2.HTML.</a>
+                    <div class="hidden h-0 invisible" id="div2">
+                        <a href="javascript:showVideo(3)">Estrutura básica e primeiros comandos HTML</a>
+                        <a href="javascript:showVideo(4)">Textos / Listas</a>
                     </div>
                 </h1>
-                <h1 class="p-4 border-b-2 border-gray">
-                    <a href="javascript:showDiv(3)">3.Introdução CSS.</a>
-                    <div class="hidden" id="div3">
-                        <a href="http://">1.Introdução</a>
-                        <a href="http://">2.Conceitos básicos</a>
+                <h1 class="my-2 border-b-2 border-gray flex justify-center flex-col">
+                    <a href="javascript:showDiv(3)">3.CSS.</a>
+                    <div class="hidden h-0 invisible" id="div3">
+                        <a href="javascript:showVideo(5)">O começo de tudo</a>
+                        <a href="javascript:showVideo(6)">Contruindo um projeto</a>
                     </div>
                 </h1>
-                <h1 class="p-4 border-b-2 border-gray">
-                    <a href="javascript:showDiv(4)">4.Produção do primeiro projeto.</a>
-                    <div class="hidden" id="div4">
-                        <a href="http://">1.Introdução</a>
-                        <a href="http://">2.Conceitos básicos</a>
+                <h1 class="my-2 border-b-2 border-gray flex justify-center flex-col">
+                    <a href="javascript:showDiv(4)">4.JavaScript.</a>
+                    <div class="hidden h-0 invisible" id="div4">
+                        <a href="javascript:showVideo(7)">Introdução</a>
+                        <a href="javascript:showVideo(8)">Conceitos iniciais</a>
                     </div>
                 </h1>
             </div>
         </div>
     </section>
 
-
-
-    <footer class="h-auto bg-black p-8 border-t-2">
-        <h1 class="font-serif text-center text-3xl text-white text-gray italic"><i
+    <footer class="bg-black border-t-2 flex items-center justify-center" style="min-height: 10vh;">
+        <h1 class="font-serif text-center text-3xl text-white text-gray italic sm:text-lg"><i
                 class="fa-solid fa-code text-cyan-500"></i>Digital Learn</h1>
     </footer>
 
