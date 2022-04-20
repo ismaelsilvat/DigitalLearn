@@ -1,24 +1,21 @@
-package com.company.poo.model;
+package com.company.model;
 
 public class Usuario {
     private String nome;
     private String sobrenome;
-    private String dataNascimento;
-    private String telefone;
-    private String email;
+    private String dtNascimento;
     private String cpf;
-    private String endereco;
-    private Pagamento pagamento;
+    private Endereco endereco;
+    private String email;
+    private String telefone;
 
-    public Usuario(String nome, String sobrenome, String dataNascimento, String telefone, String email, String cpf, String endereco, Pagamento pagamento){
+    public Usuario(String nome, String sobrenome, String dtNascimento, Endereco endereco, String email, String telefone) {
         this.nome = nome;
         this.sobrenome = sobrenome;
-        this.dataNascimento = dataNascimento;
-        this.telefone = telefone;
-        this.email = email;
-        this.cpf = cpf;
+        this.dtNascimento = dtNascimento;
         this.endereco = endereco;
-        this.pagamento = pagamento;
+        this.email = email;
+        this.telefone = telefone;
     }
 
     public String getNome() {
@@ -37,20 +34,28 @@ public class Usuario {
         this.sobrenome = sobrenome;
     }
 
-    public String getDataNascimento() {
-        return dataNascimento;
+    public String getDtNascimento() {
+        return dtNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setDtNascimento(String dtNascimento) {
+        this.dtNascimento = dtNascimento;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public String getcpf() {
+        return cpf;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
+    public void setcpf(String cpf) {
+        this.dtNascimento = cpf;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEnderec(Endereco endereco) {
+        this.endereco = endereco;
     }
 
     public String getEmail() {
@@ -61,40 +66,11 @@ public class Usuario {
         this.email = email;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public Pagamento getPagamento() {
-        return pagamento;
-    }
-
-    public void setPagamento(Pagamento pagamento) {
-        this.pagamento = pagamento;
-    }
-
-    @Override
-    public String toString() {
-        return "Usuario{" +
-                "nome='" + nome + '\'' +
-                ", sobrenome='" + sobrenome + '\'' +
-                ", dataNascimento='" + dataNascimento + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", email='" + email + '\'' +
-                ", cpf='" + cpf + '\'' +
-                ", endereco='" + endereco + '\'' +
-                '}';
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 }

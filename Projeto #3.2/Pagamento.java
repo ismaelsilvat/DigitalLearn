@@ -1,11 +1,37 @@
-package com.company.poo.model;
+package com.company.model;
 
 public class Pagamento {
-    private String formaDePagamento;
-    private double valorTotal;
+    private String metodoPagamento;
+    private String precoTotal;
+    private Usuario usuario;
 
-    public Pagamento(String formaDePagamento, double valorTotal){
-        this.formaDePagamento = formaDePagamento;
-        this.valorTotal = valorTotal;
+    public Pagamento(String metodoPagamento, String precoTotal, Usuario usuario) {
+        this.metodoPagamento = metodoPagamento;
+        this.precoTotal = precoTotal;
+        this.usuario = usuario;
+    }
+
+    public String getMetodoPagamento() {
+        return metodoPagamento;
+    }
+
+    public void setMetodoPagamento(String metodoPagamento) {
+        this.metodoPagamento = metodoPagamento;
+    }
+
+    public String getPrecoTotal() {
+        return precoTotal;
+    }
+
+    public void setPrecoTotal(String precoTotal) {
+        this.precoTotal = precoTotal;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }
